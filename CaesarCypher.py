@@ -13,7 +13,7 @@ def cipher(word, num):
         tempIn = temp + n
         while a: 
             if tempIn > 25: # checking if the index is out of bounds
-                tempIn -= 26
+                tempIn = tempIn % 26
             else: # index is in bounds
                 a = False
                 p[i] = alpha[tempIn]
