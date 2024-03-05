@@ -1,6 +1,16 @@
 # Julia Chen 349860031
 
 def cipher(word, num):
+    '''
+    this encrypts the target string using the caesar encryption
+
+    arguments
+        target : string
+        value : integer
+
+    return
+        string : the encrypted version of target
+    '''
     # variables
     p = list(inList[0].lower())
     n = int(inList[1])
