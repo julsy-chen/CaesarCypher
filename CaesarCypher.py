@@ -19,11 +19,13 @@ def cipher(word, num):
     # processing
     for i in range(0, len(p)):
         a = True
-        temp = alpha.find(p[i])
-        tempIn = temp + n
+        temp = alpha.find(p[i]) # index of the letter in alpha
+        tempIn = temp + n # index of the shifted letter
         while a: 
             if tempIn > 25: # checking if the index is out of bounds
                 tempIn = tempIn % 26
+            elif tempIn < 0:
+                tempIn = 26 + tempIn
             else: # index is in bounds
                 a = False
                 p[i] = alpha[tempIn]
